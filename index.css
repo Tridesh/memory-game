@@ -14,18 +14,21 @@ header {
 
 body {
     background-color: black;
+    overflow-y: hidden;
 }
 
 .gridBox {
     display: grid;
-    padding-left: 300px;
-    padding-right: 80px;
+    padding-left:200px;
+    padding-right: 200px;
     padding-top: 50px;
-    grid-template-columns: repeat(6, 100px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 10px;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    gap: 15px;
 }
-
+.backside {
+    backface-visibility: hidden;
+}
 .box {
     display: flex;
     align-items: center;
@@ -33,23 +36,23 @@ body {
     font-size: 40px;
     font-family: font;
     color: white;
-    background-color: gray; /* Initial gray color */
     cursor: pointer;
     border: 2px solid whitesmoke;
+    backface-visibility: visible;
+    background-color: gray;
 }
 
-/* Styling for the flipped state */
-.box.flipped {
+
+/* .box.flipped {
     animation: flipAnimation 1s forwards;
 }
 
 @keyframes flipAnimation {
     0%, 100% {
         transform: scaleX(1);
-        background-color: gray; /* Flipping back to gray */
     }
     50% {
         transform: scaleX(-1);
 
     }
-}
+} */
