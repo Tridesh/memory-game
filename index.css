@@ -1,69 +1,64 @@
 @font-face {
-    font-family: font;
-    src: url("font.ttf");
+  font-family: font;
+  src: url("font.ttf");
 }
-
-header {
-    color: #197fe6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: font;
-    font-size: 40px;
-}
-
 body {
-    background-color: black;
-    overflow-y: hidden;
-    margin: 0; /* Remove default body margin */
+  background-color: gray;
+}
+.tries {
+  margin-left: 20%;
+  font-size: 30px;
+  font-family: font;
+}
+.row {
+  text-align: center;
 }
 
-.gridBox {
-    display: grid;
-    padding: 50px;
-    margin-left: 350px;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 15px;
+.card {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform 0.5s;
+  border: black 5px solid;
 }
 
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    font-family: font;
-    color: white;
-    cursor: pointer;
-    border: 2px solid whitesmoke;
-    background-color: gray;
-    height: 100%;
+.card.done {
+  cursor: default;
 }
 
-.flipped {
-    animation: flipAnimation 1s forwards;
-    transform-style: preserve-3d;
+.card.done:hover {
+  cursor: default;
+  box-shadow: none;
 }
 
-@keyframes flipAnimation {
-    0%, 100% {
-        transform: scaleX(1);
-    }
-    50% {
-        transform: scaleX(-1);
-    }
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.orange {
+  background-color: orange;
+}
+.cyan {
+  background-color: cyan;
+}
+.yellow {
+  background-color: yellow;
+}
+.pink {
+  background-color: pink;
+}
+.teal {
+  background-color: teal;
 }
 
-.firstFlip {
-    animation: firstFlipAnimation 0.5s forwards;
-    transform-style: preserve-3d;
-}
-
-@keyframes firstFlipAnimation {
-    0% {
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    100% {
-        transform: perspective(1000px) rotateY(180deg);
-    }
+.color-hidden {
+  background-color: #eee;
 }
